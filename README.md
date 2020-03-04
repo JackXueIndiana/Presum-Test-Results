@@ -1,5 +1,5 @@
 # Presum-Test-Results
-The last week we tried to reproduce the results reported by Yang Liu et al., (https://arxiv.org/abs/1908.08345), on using pretrained BERT model to extractively summarize the text.<b/>  
+The last week we tried to reproduce the results reported by Liu and Lapata, (https://arxiv.org/abs/1908.08345), on using pretrained BERT model to extractively summarize the text.<b/>  
 Here is their result:<b/>   
 
 BERTSUMEXT 43.25 20.24 39.63<b/> 
@@ -27,7 +27,8 @@ python3 train.py -task ext -mode validate -batch_size 800 -test_batch_size 64 -b
 python3 train.py -task ext -mode test -batch_size 800 -test_batch_size 64 -bert_data_path ../bert_data/cnndm -log_file ../logs/test_abs_bert_cnndm -model_path .. /bert_data/cnndm -log_file ../logs/test_abs_bert_cnndm -test_from ../models/ext_bert_cnndm/model_step_50000.pt -sep_optim true -use_interval true -visible_gpus 0 -max_p os 512 -max_length 200 -alpha 0.95 -min_length 50 -result_path ../results &amp; 
 
 ## Results
-A good indication that the training is converged is that the cross entropy (xent) reduced to 10.56 to 1.85: <b/>
+A good indication that the training is converged is that the cross entropy (xent) reduced to 10.56 to 1.85:
+
 [2020-02-29 05:41:43,049 INFO] Step 50/50000; xent: 10.56; lr: 0.0000001;  10 docs/s;     21 sec
 
 [2020-03-01 00:59:48,282 INFO] Step 50000/50000; xent: 1.85; lr: 0.0000089;  22 docs/s;  26876 sec
