@@ -1,7 +1,9 @@
 # Presum-Test-Results
 The last week we tried to reproduce the results reported by Yang Liu et al., (https://arxiv.org/abs/1908.08345), on using pretrained BERT model to extractively summarize the text.<b/>  
-Here is their result:<b/>     
+Here is their result:<b/>   
+
 BERTSUMEXT 43.25 20.24 39.63<b/> 
+
 Since we are using a NV6 with single GPU we ran the training (in the same number of training step) with CNN and Daily Mail dataset but about ¼ of batch size. Still, the result is pretty impressive:<b/>  
 >> ROUGE-F(1/2/3/l): 41.91/19.09/38.31 <b/>
 
@@ -26,6 +28,7 @@ python3 train.py -task ext -mode test -batch_size 800 -test_batch_size 64 -bert_
 
 ## Results
 A good indication that the training is converged is that the cross entropy (xent) reduced to 10.56 to 1.85: <b/>
-[2020-02-29 05:41:43,049 INFO] Step 50/50000; xent: 10.56; lr: 0.0000001;  10 docs/s;     21 sec<b/>
-[2020-03-01 00:59:48,282 INFO] Step 50000/50000; xent: 1.85; lr: 0.0000089;  22 docs/s;  26876 sec<b/>
+[2020-02-29 05:41:43,049 INFO] Step 50/50000; xent: 10.56; lr: 0.0000001;  10 docs/s;     21 sec
+
+[2020-03-01 00:59:48,282 INFO] Step 50000/50000; xent: 1.85; lr: 0.0000089;  22 docs/s;  26876 sec
 
