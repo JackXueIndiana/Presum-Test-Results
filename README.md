@@ -1,5 +1,5 @@
 # Presum-Test-Results
-The last week we tried to reproduce the results reported by Liu and Lapata, (https://arxiv.org/abs/1908.08345), on using pretrained BERT model to extractively summarize the text.<b/>  
+The excellence of using Google Language pretraining NLP BERT model for text summarization has been documented at https://paperswithcode.com/sota/document-summarization-on-cnn-daily-mail. The last week we tried to mimic the results reported by Liu and Lapata, (https://arxiv.org/abs/1908.08345), on using pretrained BERT model to extractively summarize the text.<b/>  
 Here is their result:<b/>   
 
 BERTSUMEXT 43.25 20.24 39.63<b/> 
