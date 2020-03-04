@@ -11,7 +11,7 @@ Since we are using a NV6 with single GPU we ran the training (in the same number
 We got the source code and the preprocessed Porth CNNDM data set, in a set of *.pt files from the GtiHub repo https://github.com/nlpyang/PreSummmaster master branch. <b/>
 
 We made a one-line change in ../src/models/data_loader.py to enable to process all data files: we changed line 84 in data_loader.py to<b/> 
-''''
+''''python
 pts = sorted(glob.glob(args.bert_data_path + '/[a-z]*.' + corpus_type + '.[0-9]*.bert.pt'))   
 ''''
   
