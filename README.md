@@ -11,9 +11,10 @@ Since we are using a NV6 with single GPU we ran the training (in the same number
 We got the source code and the preprocessed Porth CNNDM data set, in a set of *.pt files from the GtiHub repo https://github.com/nlpyang/PreSummmaster master branch. <b/>
 
 We made a one-line change in ../src/models/data_loader.py to enable to process all data files: we changed line 84 in data_loader.py to<b/> 
-
+<code>
 pts = sorted(glob.glob(args.bert_data_path + '/[a-z]*.' + corpus_type + '.[0-9]*.bert.pt'))   
-
+<code>
+  
 Since the training process will write out many checkpoint files and can be 2-3 GB size each, we add a 1TB SDD data disk to the VM and mounted as /datadrive and we cloned the code on it to avoid OS disk full. 
 
 Since the training process can take many hours (20+?), we also set up Azure Bastion to web-FTP to the VM so we can check the progress and results anyplace and no worries about the VM network security setting.  
